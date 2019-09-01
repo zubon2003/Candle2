@@ -426,13 +426,13 @@ QGroupBox {
             <string>Control</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_9">
-            <item>
-             <widget class="QLabel" name="label_17">
+			<item>
+             <widget class="QLabel" name="label_171">
               <property name="styleSheet">
                <string notr="true">padding-top: 3;</string>
               </property>
               <property name="text">
-               <string>Probe commands:</string>
+               <string>Probe X+ commands:</string>
               </property>
               <property name="indent">
                <number>0</number>
@@ -440,7 +440,99 @@ QGroupBox {
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="txtTouchCommand">
+             <widget class="QLineEdit" name="txtXPlusTouchCommand">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>Command 1; command 2; ...</string>
+              </property>
+             </widget>
+            </item>
+			<item>
+             <widget class="QLabel" name="label_172">
+              <property name="styleSheet">
+               <string notr="true">padding-top: 3;</string>
+              </property>
+              <property name="text">
+               <string>Probe X- commands:</string>
+              </property>
+              <property name="indent">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtXMinusTouchCommand">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>Command 1; command 2; ...</string>
+              </property>
+             </widget>
+            </item>
+		    <item>
+             <widget class="QLabel" name="label_173">
+              <property name="styleSheet">
+               <string notr="true">padding-top: 3;</string>
+              </property>
+              <property name="text">
+               <string>Probe Y+ commands:</string>
+              </property>
+              <property name="indent">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtYPlusTouchCommand">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>Command 1; command 2; ...</string>
+              </property>
+             </widget>
+            </item>
+		    <item>
+             <widget class="QLabel" name="label_174">
+              <property name="styleSheet">
+               <string notr="true">padding-top: 3;</string>
+              </property>
+              <property name="text">
+               <string>Probe Y- commands:</string>
+              </property>
+              <property name="indent">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtYMinusTouchCommand">
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="placeholderText">
+               <string>Command 1; command 2; ...</string>
+              </property>
+             </widget>
+            </item>
+			<item>
+             <widget class="QLabel" name="label_175">
+              <property name="styleSheet">
+               <string notr="true">padding-top: 3;</string>
+              </property>
+              <property name="text">
+               <string>Probe Z- commands:</string>
+              </property>
+              <property name="indent">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtZMinusTouchCommand">
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>

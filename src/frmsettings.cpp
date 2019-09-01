@@ -414,14 +414,54 @@ void frmSettings::setUnits(int units)
     ui->cboUnits->setCurrentIndex(units);
 }
 
-QString frmSettings::touchCommand()
+QString frmSettings::xMinusTouchCommand()
 {
-    return ui->txtTouchCommand->text();
+    return ui->txtXMinusTouchCommand->text();
 }
 
-void frmSettings::setTouchCommand(QString touchCommand)
+void frmSettings::setXMinusTouchCommand(QString touchCommand)
 {
-    ui->txtTouchCommand->setText(touchCommand);
+    ui->txtXMinusTouchCommand->setText(touchCommand);
+}
+
+QString frmSettings::xPlusTouchCommand()
+{
+    return ui->txtXPlusTouchCommand->text();
+}
+
+void frmSettings::setXPlusTouchCommand(QString touchCommand)
+{
+    ui->txtXPlusTouchCommand->setText(touchCommand);
+}
+
+QString frmSettings::yMinusTouchCommand()
+{
+    return ui->txtYMinusTouchCommand->text();
+}
+
+void frmSettings::setYMinusTouchCommand(QString touchCommand)
+{
+    ui->txtYMinusTouchCommand->setText(touchCommand);
+}
+
+QString frmSettings::yPlusTouchCommand()
+{
+    return ui->txtYPlusTouchCommand->text();
+}
+
+void frmSettings::setYPlusTouchCommand(QString touchCommand)
+{
+    ui->txtYPlusTouchCommand->setText(touchCommand);
+}
+
+QString frmSettings::zMinusTouchCommand()
+{
+    return ui->txtZMinusTouchCommand->text();
+}
+
+void frmSettings::setZMinusTouchCommand(QString touchCommand)
+{
+    ui->txtZMinusTouchCommand->setText(touchCommand);
 }
 
 bool frmSettings::simplify()
@@ -635,7 +675,11 @@ void frmSettings::on_cmdDefaults_clicked()
     setSpindleSpeedMax(10000);
     setLaserPowerMin(0);
     setLaserPowerMax(100);
-    setTouchCommand("G21G91G38.2Z-30F100; G0Z1; G38.2Z-2F10");
+    setZMinusTouchCommand("G21G91G38.2Z-30F100; G0Z1; G38.2Z-2F10");
+    setXMinusTouchCommand("G21G91G38.2X-30F100; G0X1; G38.2X-2F10");
+    setYMinusTouchCommand("G21G91G38.2Y-30F100; G0Y1; G38.2Y-2F10");
+    setXPlusTouchCommand("G21G91G38.2X30F100; G0X-1; G38.2X2F10");
+    setYPlusTouchCommand("G21G91G38.2Y30F100; G0Y-1; G38.2Y2F10");
     setSafePositionCommand("G21G90; G53G0Z0");
     setMoveOnRestore(false);
     setRestoreMode(0);

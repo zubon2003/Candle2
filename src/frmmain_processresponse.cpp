@@ -91,7 +91,11 @@ void frmMain::ProcessGRBL1_1()
                 ui->chkTestMode->setChecked(status == CHECK);
                 ui->cmdFilePause->setChecked(status == HOLD0 || status == HOLD1 || status == QUEUE);
                 ui->cmdSpindle->setEnabled(!m_processingFile || status == HOLD0);
-                ui->cmdTouch->setEnabled(status == IDLE);
+                ui->cmdZMinusTouch->setEnabled(status == IDLE);
+                ui->cmdXMinusTouch->setEnabled(status == IDLE);
+                ui->cmdYMinusTouch->setEnabled(status == IDLE);
+                ui->cmdXPlusTouch->setEnabled(status == IDLE);
+                ui->cmdYPlusTouch->setEnabled(status == IDLE);
                 ui->cmdHome->setEnabled(status == IDLE || status == ALARM);
 #ifdef WINDOWS
                 if (QSysInfo::windowsVersion() >= QSysInfo::WV_WINDOWS7)
@@ -867,7 +871,11 @@ void frmMain::ProcessGRBL_ETH(QString data)
                 ui->chkTestMode->setChecked(status == CHECK);
                 ui->cmdFilePause->setChecked(status == HOLD0 || status == HOLD1 || status == QUEUE);
                 ui->cmdSpindle->setEnabled(!m_processingFile || status == HOLD0);
-                ui->cmdTouch->setEnabled(status == IDLE);
+                ui->cmdZMinusTouch->setEnabled(status == IDLE);
+                ui->cmdXMinusTouch->setEnabled(status == IDLE);
+                ui->cmdYMinusTouch->setEnabled(status == IDLE);
+                ui->cmdXPlusTouch->setEnabled(status == IDLE);
+                ui->cmdYPlusTouch->setEnabled(status == IDLE);
                 ui->cmdHome->setEnabled(status == IDLE || status == ALARM);
 #ifdef WINDOWS
                 if (QSysInfo::windowsVersion() >= QSysInfo::WV_WINDOWS7)

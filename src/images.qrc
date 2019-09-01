@@ -1,7 +1,11 @@
 <RCC>
     <qresource prefix="/">
         <file>images/search_for_home2.png</file>
-        <file>images/search_for_z.png</file>
+        <file>images/search_for_x_plus.png</file>
+		<file>images/search_for_x_minus.png</file>
+		<file>images/search_for_y_plus.png</file>
+		<file>images/search_for_y_minus.png</file>
+		<file>images/search_for_z_minus.png</file>
         <file>images/safe_z.png</file>
         <file>images/axis_zero.png</file>
         <file>images/axis_return.png</file>

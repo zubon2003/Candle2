@@ -1874,6 +1874,110 @@ padding-right: 8;</string>
                </property>
               </widget>
              </item>
+             <item row="4" column="1">
+              <widget class="QToolButton" name="cmdXPlusTouch">
+               <property name="minimumSize">
+                <size>
+                 <width>54</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>ProbeX+</string>
+               </property>
+               <property name="icon">
+                <iconset resource="images.qrc">
+                 <normaloff>:/images/search_for_x_plus.png</normaloff>:/images/search_for_x_plus.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QToolButton" name="cmdXMinusTouch">
+               <property name="minimumSize">
+                <size>
+                 <width>54</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>ProbeX-</string>
+               </property>
+               <property name="icon">
+                <iconset resource="images.qrc">
+                 <normaloff>:/images/search_for_x_minus.png</normaloff>:/images/search_for_x_minus.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="5">
+              <widget class="QToolButton" name="cmdYPlusTouch">
+               <property name="minimumSize">
+                <size>
+                 <width>54</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>ProbeY+</string>
+               </property>
+               <property name="icon">
+                <iconset resource="images.qrc">
+                 <normaloff>:/images/search_for_y_plus.png</normaloff>:/images/search_for_y_plus.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="7">
+              <widget class="QToolButton" name="cmdYMinusTouch">
+               <property name="minimumSize">
+                <size>
+                 <width>54</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>ProbeY-</string>
+               </property>
+               <property name="icon">
+                <iconset resource="images.qrc">
+                 <normaloff>:/images/search_for_y_minus.png</normaloff>:/images/search_for_y_minus.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="toolButtonStyle">
+                <enum>Qt::ToolButtonTextUnderIcon</enum>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="5">
               <widget class="QToolButton" name="cmdZeroY">
                <property name="minimumSize">
@@ -2005,7 +2109,7 @@ padding-right: 8;</string>
               </widget>
              </item>
              <item row="2" column="5">
-              <widget class="QToolButton" name="cmdTouch">
+              <widget class="QToolButton" name="cmdZMinusTouch">
                <property name="minimumSize">
                 <size>
                  <width>54</width>
@@ -2013,11 +2117,11 @@ padding-right: 8;</string>
                 </size>
                </property>
                <property name="text">
-                <string>Probe</string>
+                <string>ProbeZ-</string>
                </property>
                <property name="icon">
                 <iconset resource="images.qrc">
-                 <normaloff>:/images/search_for_z.png</normaloff>:/images/search_for_z.png</iconset>
+                 <normaloff>:/images/search_for_z_minus.png</normaloff>:/images/search_for_z_minus.png</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -2115,9 +2219,9 @@ padding-right: 8;</string>
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
-            <width>381</width>
-            <height>738</height>
+            <y>-276</y>
+            <width>374</width>
+            <height>649</height>
            </rect>
           </property>
           <property name="sizePolicy">
@@ -3038,6 +3142,9 @@ padding-right: 8;</string>
                    <property name="text">
                     <string>Use heightmap</string>
                    </property>
+                   <property name="checked">
+                    <bool>false</bool>
+                   </property>
                   </widget>
                  </item>
                  <item>
@@ -3055,7 +3162,7 @@ padding-right: 8;</string>
                       <enum>Qt::NoFocus</enum>
                      </property>
                      <property name="text">
-                      <string/>
+                      <string>Absent</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -3162,7 +3269,7 @@ padding-right: 8;</string>
      <x>0</x>
      <y>0</y>
      <width>1170</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="mnuFile">

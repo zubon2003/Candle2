@@ -123,7 +123,12 @@ void frmMain::loadSettings()
     m_storedKeyboardControl = set.value("keyboardControl", false).toBool();
 
     m_settings->setAutoCompletion(set.value("autoCompletion", true).toBool());
-    m_settings->setTouchCommand(set.value("touchCommand", "G21G91G38.2Z-30F80; G0Z1; G38.2Z-2F10").toString());
+    m_settings->setZMinusTouchCommand(set.value("zMinusTouchCommand", "G21G91G38.2Z-30F80; G0Z1; G38.2Z-2F10").toString());
+    m_settings->setXMinusTouchCommand(set.value("xMinusTouchCommand", "G21G91G38.2X-30F80; G0X1; G38.2X-2F10").toString());
+    m_settings->setYMinusTouchCommand(set.value("yMinusTouchCommand", "G21G91G38.2Y-30F80; G0Y1; G38.2Y-2F10").toString());
+    m_settings->setXPlusTouchCommand(set.value("xPlusTouchCommand", "G21G91G38.2X30F80; G0X-1; G38.2X2F10").toString());
+	m_settings->setYPlusTouchCommand(set.value("yPlusTouchCommand", "G21G91G38.2Y30F80; G0Y-1; G38.2Y2F10").toString());
+	
     m_settings->setSafePositionCommand(set.value("safePositionCommand", "G21G90; G53G0Z10").toString());
 
     foreach (StyledToolButton* button, this->findChildren<StyledToolButton*>(QRegExp("cmdUser\\d")))
@@ -241,7 +246,11 @@ void frmMain::saveSettings()
     set.setValue("recentFiles", m_recentFiles);
     set.setValue("recentHeightmaps", m_recentHeightmaps);
     set.setValue("lastFolder", m_lastFolder);
-    set.setValue("touchCommand", m_settings->touchCommand());
+    set.setValue("zMinusTouchCommand", m_settings->zMinusTouchCommand());
+	set.setValue("xMinusTouchCommand", m_settings->xMinusTouchCommand());
+	set.setValue("yMinusTouchCommand", m_settings->yMinusTouchCommand());
+	set.setValue("xPlusTouchCommand", m_settings->xPlusTouchCommand());
+	set.setValue("yPlusTouchCommand", m_settings->yPlusTouchCommand());
     set.setValue("safePositionCommand", m_settings->safePositionCommand());
     set.setValue("panelUserCommandsVisible", m_settings->panelUserCommands());
     set.setValue("panelHeightmapVisible", m_settings->panelHeightmap());

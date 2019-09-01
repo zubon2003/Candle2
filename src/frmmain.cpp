@@ -446,7 +446,11 @@ void frmMain::updateControlsState()
 
     ui->chkTestMode->setEnabled(portOpened && !m_processingFile);
     ui->cmdHome->setEnabled(!m_processingFile);
-    ui->cmdTouch->setEnabled(!m_processingFile);
+    ui->cmdZMinusTouch->setEnabled(!m_processingFile);
+    ui->cmdXMinusTouch->setEnabled(!m_processingFile);
+    ui->cmdYMinusTouch->setEnabled(!m_processingFile);
+    ui->cmdXPlusTouch->setEnabled(!m_processingFile);
+    ui->cmdYPlusTouch->setEnabled(!m_processingFile);	
     ui->cmdZeroX->setEnabled(!m_processingFile);
     ui->cmdZeroY->setEnabled(!m_processingFile);
     ui->cmdZeroZ->setEnabled(!m_processingFile);
@@ -1191,11 +1195,59 @@ void frmMain::on_cmdHome_clicked()
     sendCommand("$H", -1, m_settings->showUICommands());
 }
 
-void frmMain::on_cmdTouch_clicked()
+void frmMain::on_cmdZMinusTouch_clicked()
 {
 //    m_homing = true;
 
-    QStringList list = m_settings->touchCommand().split(";");
+    QStringList list = m_settings->zMinusTouchCommand().split(";");
+
+    foreach (QString cmd, list)
+    {
+        sendCommand(cmd.trimmed(), -1, m_settings->showUICommands());
+    }
+}
+
+void frmMain::on_cmdXMinusTouch_clicked()
+{
+//    m_homing = true;
+
+    QStringList list = m_settings->xMinusTouchCommand().split(";");
+
+    foreach (QString cmd, list)
+    {
+        sendCommand(cmd.trimmed(), -1, m_settings->showUICommands());
+    }
+}
+
+void frmMain::on_cmdYMinusTouch_clicked()
+{
+//    m_homing = true;
+
+    QStringList list = m_settings->yMinusTouchCommand().split(";");
+
+    foreach (QString cmd, list)
+    {
+        sendCommand(cmd.trimmed(), -1, m_settings->showUICommands());
+    }
+}
+
+void frmMain::on_cmdXPlusTouch_clicked()
+{
+//    m_homing = true;
+
+    QStringList list = m_settings->xPlusTouchCommand().split(";");
+
+    foreach (QString cmd, list)
+    {
+        sendCommand(cmd.trimmed(), -1, m_settings->showUICommands());
+    }
+}
+
+void frmMain::on_cmdYPlusTouch_clicked()
+{
+//    m_homing = true;
+
+    QStringList list = m_settings->yPlusTouchCommand().split(";");
 
     foreach (QString cmd, list)
     {

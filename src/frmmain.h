@@ -156,7 +156,11 @@ private slots:
     void on_actFileOpen_triggered();
     void on_cmdCommandSend_clicked();
     void on_cmdHome_clicked();
-    void on_cmdTouch_clicked();
+    void on_cmdZMinusTouch_clicked();
+	void on_cmdXPlusTouch_clicked();
+	void on_cmdXMinusTouch_clicked();
+    void on_cmdYPlusTouch_clicked();
+    void on_cmdYMinusTouch_clicked();
     void on_cmdZeroX_clicked();
     void on_cmdZeroY_clicked();
     void on_cmdZeroZ_clicked();

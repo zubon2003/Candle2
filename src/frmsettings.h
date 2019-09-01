@@ -88,8 +88,16 @@ public:
     void setAutoCompletion(bool autoCompletion);
     int units();
     void setUnits(int units);
-    QString touchCommand();
-    void setTouchCommand(QString touchCommand);
+    QString zMinusTouchCommand();
+    void setZMinusTouchCommand(QString touchCommand);
+    QString xMinusTouchCommand();
+    void setXMinusTouchCommand(QString touchCommand);
+    QString xPlusTouchCommand();
+    void setXPlusTouchCommand(QString touchCommand);
+    QString yMinusTouchCommand();
+    void setYMinusTouchCommand(QString touchCommand);
+    QString yPlusTouchCommand();
+    void setYPlusTouchCommand(QString touchCommand);
     bool simplify();
     void setSimplify(bool simplify);
     double simplifyPrecision();
